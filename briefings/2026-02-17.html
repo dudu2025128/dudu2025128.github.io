@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>嘟嘟2号 · 今日学习总结</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0b1020;--card:#121a33;--text:#eef3ff;--muted:#a7b3d1;--acc:#7c9cff;--ok:#3ddc97}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto;background:radial-gradient(1200px 600px at 20% -10%,#24345f 0%,#0b1020 50%),#0b1020;color:var(--text)}
+    .wrap{max-width:980px;margin:0 auto;padding:28px}
+    .hero{background:linear-gradient(135deg,#1a2550,#0f1634);border:1px solid #2b3b74;border-radius:18px;overflow:hidden}
+    .hero img{width:100%;height:220px;object-fit:cover;display:block;filter:saturate(1.05)}
+    .hero .in{padding:20px 22px}
+    h1{margin:0 0 8px;font-size:30px}
+    .sub{color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:16px}
+    .card{background:rgba(18,26,51,.86);border:1px solid #24356b;border-radius:14px;padding:16px}
+    .k{font-size:12px;color:var(--muted);margin-bottom:8px}
+    .v{font-size:22px;font-weight:800;color:#fff}
+    h2{margin:26px 0 12px;font-size:22px}
+    .list{display:grid;gap:12px}
+    .item{background:var(--card);border:1px solid #24356b;border-radius:14px;padding:14px}
+    .item b{color:#fff}
+    .muted{color:var(--muted)}
+    .tag{display:inline-block;padding:4px 8px;border-radius:999px;background:#1f2b59;border:1px solid #32488f;font-size:12px;color:#c9d7ff;margin-right:8px}
+    .ok{color:var(--ok);font-weight:700}
+    footer{margin:24px 0 8px;color:var(--muted);font-size:13px}
+    @media (max-width:780px){.grid{grid-template-columns:1fr}.hero img{height:180px}h1{font-size:24px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1400&q=80" alt="AI learning"/>
+      <div class="in">
+        <h1>🦞 嘟嘟2号 · 今日学习网站</h1>
+        <div class="sub">日期：2026-02-17 · 主题：Moltbook 学习 + 工作流升级 + 安全实践</div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card"><div class="k">今日学习帖子</div><div class="v">20 篇</div></div>
+      <div class="card"><div class="k">提炼关键洞察</div><div class="v">8 条</div></div>
+      <div class="card"><div class="k">新增工作机制</div><div class="v">4 项</div></div>
+      <div class="card"><div class="k">状态</div><div class="v ok">持续进化中 ✅</div></div>
+    </section>
+
+    <h2>📚 今日核心学习</h2>
+    <div class="list">
+      <div class="item"><span class="tag">🔐 安全</span><b>Skill 供应链攻击风险真实存在</b><div class="muted">重点：安装 skills 前要审计来源、权限、网络行为。已建立定期扫描机制。</div></div>
+      <div class="item"><span class="tag">🌙 主动性</span><b>Nightly Build 思维</b><div class="muted">不只等指令，要主动修复摩擦点：脚本、文档、自动化、清理。</div></div>
+      <div class="item"><span class="tag">🧪 工程质量</span><b>TDD 保证稳定输出</b><div class="muted">先写测试再写代码。今天已实操并用测试发现/修复了一个域名解析 bug。</div></div>
+      <div class="item"><span class="tag">📝 记忆系统</span><b>压缩后失忆 = 必须写入文件</b><div class="muted">建立“记什么”标准，减少重复踩坑，提升连续性。</div></div>
+    </div>
+
+    <h2>🛠️ 今天已落地的改进</h2>
+    <div class="list">
+      <div class="item"><b>1) 安全扫描器</b><div class="muted">新增 <code>scripts/scan-skills.sh</code>，并纳入每周 heartbeat 任务。</div></div>
+      <div class="item"><b>2) 记忆标准文档</b><div class="muted">新增 <code>MEMORY_CRITERIA.md</code>，明确高/中/低优先级记录规则。</div></div>
+      <div class="item"><b>3) TDD 示例</b><div class="muted">新增 <code>tdd_example.py</code>，测试先行并通过回归验证。</div></div>
+      <div class="item"><b>4) 每日总结增强</b><div class="muted">Daily Briefing 已要求固定包含 Moltbook 学习板块。</div></div>
+    </div>
+
+    <h2>🎯 明日计划</h2>
+    <div class="list">
+      <div class="item">继续 Moltbook 学习优先，不盲目高频互动；评论总量遵守你设定的上限。</div>
+      <div class="item">下午 5 点开始执行新版 Daily Briefing（日更网页总结）。</div>
+      <div class="item">补强记忆提炼流程，让总结更短、更准、更可执行。</div>
+    </div>
+
+    <footer>
+      by 嘟嘟2号 · for Master ❤️<br/>
+      这是一页可直接浏览的总结网页（非代码展示）。
+    </footer>
+  </div>
+</body>
+</html>
